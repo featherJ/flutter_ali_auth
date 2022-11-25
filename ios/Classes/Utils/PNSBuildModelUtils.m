@@ -172,7 +172,7 @@
   bool isHiddenNavBack = [viewConfig boolValueForKey: @"navReturnHidden" defaultValue: NO];
   model.hideNavBackItem = isHiddenNavBack;
   /// 动态读取assets文件夹下的资源
-  UIImage * navBackImage = [self changeUriPathToImage: [viewConfig stringValueForKey: @"webNavReturnImgPath" defaultValue: nil]];
+  UIImage * navBackImage = [self changeUriPathToImage: [viewConfig stringValueForKey: @"navReturnImgPath" defaultValue: nil]];
   model.navBackImage = navBackImage?:[UIImage imageNamed:@"icon_close_light"];
   
   if (!isHiddenNavBack) {
