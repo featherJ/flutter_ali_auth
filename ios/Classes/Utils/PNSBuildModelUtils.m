@@ -356,7 +356,10 @@
     if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
       frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
     }
-    if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
+    if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
+      frame.origin.y = screenSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+    }
+    if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
       frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
     }
     return frame;
@@ -821,7 +824,10 @@
     if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
       frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
     }
-    if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
+    if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
+      frame.origin.y = screenSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+    }
+    if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
       frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
     }
     return frame;
@@ -1394,7 +1400,10 @@
       if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
         frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
       }
-      if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
+      if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
+        frame.origin.y = screenSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+      }
+      if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
         frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
       }
       return frame;
@@ -1798,7 +1807,10 @@
     if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
       frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
     }
-    if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
+    if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
+      frame.origin.y = screenSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+    }
+    if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
       frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
     }
     return frame;
