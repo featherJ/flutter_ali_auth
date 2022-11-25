@@ -327,6 +327,10 @@
       protocolThreeURL
     ];
   }
+  model.privacyColors = @[
+    [self getColor: [viewConfig stringValueForKey: @"protocolColor" defaultValue: @"#F00F00"]],
+    [self getColor: [viewConfig stringValueForKey: @"protocolCustomColor" defaultValue: @"#FDFDFD"]]
+  ];
   
   /** 导航背景色*/
   model.privacyNavColor = [self getColor: [viewConfig stringValueForKey: @"webNavColor" defaultValue: @"#FFFFFF"]];
@@ -794,13 +798,17 @@
     [viewConfig stringValueForKey: @"protocolThreeName" defaultValue: @""],
     [viewConfig stringValueForKey: @"protocolThreeURL" defaultValue: @""]
   ];
-  NSArray *privacyColors = [[viewConfig stringValueForKey: @"appPrivacyColor" defaultValue: nil] componentsSeparatedByString:@","];
-  if(privacyColors != nil && privacyColors.count > 1){
-    model.privacyColors = @[
-      [self getColor: privacyColors[0]],
-      [self getColor: privacyColors[1]]
-    ];
-  }
+  // NSArray *privacyColors = [[viewConfig stringValueForKey: @"appPrivacyColor" defaultValue: nil] componentsSeparatedByString:@","];
+  // if(privacyColors != nil && privacyColors.count > 1){
+  //   model.privacyColors = @[
+  //     [self getColor: privacyColors[0]],
+  //     [self getColor: privacyColors[1]]
+  //   ];
+  // }
+  model.privacyColors = @[
+    [self getColor: [viewConfig stringValueForKey: @"protocolColor" defaultValue: @"#F00F00"]],
+    [self getColor: [viewConfig stringValueForKey: @"protocolCustomColor" defaultValue: @"#FDFDFD"]]
+  ];
   
   model.privacyAlignment = [viewConfig intValueForKey: @"protocolLayoutGravity" defaultValue: 1];
   model.privacyFont = [UIFont fontWithName:@"PingFangSC-Regular" size: [viewConfig floatValueForKey: @"privacyTextSize" defaultValue: 12.0]];
@@ -1347,15 +1355,33 @@
     model.checkBoxWH = [viewConfig floatValueForKey: @"checkBoxHeight" defaultValue: 17.0];
     /// 9勾选统一按钮 END
     ///
-    model.privacyOne = [[viewConfig stringValueForKey: @"appPrivacyOne" defaultValue: nil] componentsSeparatedByString:@","];
-    model.privacyTwo = [[viewConfig stringValueForKey: @"appPrivacyTwo" defaultValue: nil] componentsSeparatedByString:@","];
-    NSArray *privacyColors = [[viewConfig stringValueForKey: @"appPrivacyColor" defaultValue: nil] componentsSeparatedByString:@","];
-    if(privacyColors != nil && privacyColors.count > 1){
-      model.privacyColors = @[
-        [self getColor: privacyColors[0]],
-        [self getColor: privacyColors[1]]
-      ];
-    }
+    // model.privacyOne = [[viewConfig stringValueForKey: @"appPrivacyOne" defaultValue: nil] componentsSeparatedByString:@","];
+    // model.privacyTwo = [[viewConfig stringValueForKey: @"appPrivacyTwo" defaultValue: nil] componentsSeparatedByString:@","];
+    // NSArray *privacyColors = [[viewConfig stringValueForKey: @"appPrivacyColor" defaultValue: nil] componentsSeparatedByString:@","];
+    // if(privacyColors != nil && privacyColors.count > 1){
+    //   model.privacyColors = @[
+    //     [self getColor: privacyColors[0]],
+    //     [self getColor: privacyColors[1]]
+    //   ];
+    // }
+
+  model.privacyOne = @[
+    [viewConfig stringValueForKey: @"protocolOneName" defaultValue: @""],
+    [viewConfig stringValueForKey: @"protocolOneURL" defaultValue: @""]
+  ];
+  model.privacyTwo = @[
+    [viewConfig stringValueForKey: @"protocolTwoName" defaultValue: @""],
+    [viewConfig stringValueForKey: @"protocolTwoURL" defaultValue: @""]
+  ];
+  model.privacyThree = @[
+    [viewConfig stringValueForKey: @"protocolThreeName" defaultValue: @""],
+    [viewConfig stringValueForKey: @"protocolThreeURL" defaultValue: @""]
+  ];
+  model.privacyColors = @[
+    [self getColor: [viewConfig stringValueForKey: @"protocolColor" defaultValue: @"#F00F00"]],
+    [self getColor: [viewConfig stringValueForKey: @"protocolCustomColor" defaultValue: @"#FDFDFD"]]
+  ];
+
     
     model.privacyAlignment = [viewConfig intValueForKey: @"protocolLayoutGravity" defaultValue: 1];;
     model.privacyFont = [UIFont fontWithName:@"PingFangSC-Regular" size: [viewConfig floatValueForKey: @"privacyTextSize" defaultValue: 12.0]];
@@ -1745,6 +1771,8 @@
     [self getColor: [viewConfig stringValueForKey: @"protocolColor" defaultValue: @"#F00F00"]],
     [self getColor: [viewConfig stringValueForKey: @"protocolCustomColor" defaultValue: @"#FDFDFD"]]
   ];
+
+  
   
   /** 导航背景色*/
   model.privacyNavColor = [self getColor: [viewConfig stringValueForKey: @"webNavColor" defaultValue: @"#FFFFFF"]];
