@@ -87,10 +87,16 @@ class AliAuthModel {
   /// 设置导航栏返回按钮隐藏
   final bool? navReturnHidden;
 
+  /// 设置导航栏返回按钮的X偏移
+  final int? navReturnOffsetX;
+
+  /// 设置导航栏返回按钮的Y偏移
+  final int? navReturnOffsetY;
+
   /// 设置导航栏返回按钮宽度
   final int? navReturnImgWidth;
 
-  /// 设置导航栏返回按钮隐藏高度
+  /// 设置导航栏返回按钮高度
   final int? navReturnImgHeight;
 
   /// 自定义返回按钮参数
@@ -558,6 +564,8 @@ class AliAuthModel {
     this.navText,
     this.navTextColor,
     this.navReturnImgPath,
+    this.navReturnOffsetX,
+    this.navReturnOffsetY,
     this.navReturnImgWidth,
     this.navReturnImgHeight,
     this.customReturnBtn,
@@ -745,6 +753,8 @@ Map<String, dynamic> _$AliAuthModelToJson(AliAuthModel instance) =>
       'navText': instance.navText,
       'navTextColor': instance.navTextColor,
       'navReturnImgPath': instance.navReturnImgPath,
+      'navReturnOffsetX': instance.navReturnOffsetX,
+      'navReturnOffsetY': instance.navReturnOffsetY,
       'navReturnImgWidth': instance.navReturnImgWidth,
       'navReturnImgHeight': instance.navReturnImgHeight,
       'customReturnBtn': instance.customReturnBtn?.toJson() ?? {},
