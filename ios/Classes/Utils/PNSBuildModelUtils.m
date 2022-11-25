@@ -357,7 +357,7 @@
       frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
     }
     if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
-      frame.origin.y = superViewSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+        frame.origin.y = superViewSize.height-103-frame.size.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
     }
     if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
       frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
@@ -735,6 +735,7 @@
   /// slogan 设置 END
   
   /// number 设置 START
+
   model.numberColor = [self getColor: [viewConfig stringValueForKey: @"numberColor" defaultValue: @"#555"]];
   model.numberFont = [UIFont systemFontOfSize: [viewConfig floatValueForKey: @"numberSize" defaultValue: 17]];
   model.numberFrameBlock = ^CGRect(CGSize screenSize, CGSize superViewSize, CGRect frame) {
@@ -824,8 +825,8 @@
     if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
       frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
     }
-    if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
-      frame.origin.y = superViewSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+   if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
+        frame.origin.y = superViewSize.height-103-frame.size.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
     }
     if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
       frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
@@ -1400,9 +1401,9 @@
       if ([viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1] > -1) {
         frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
       }
-      if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
-        frame.origin.y = superViewSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
-      }
+     if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
+        frame.origin.y = superViewSize.height-103-frame.size.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+    }
       if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
         frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
       }
@@ -1808,7 +1809,7 @@
       frame.origin.y = [viewConfig floatValueForKey: @"privacyOffsetY" defaultValue: -1];
     }
     if ([viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1] > -1) {
-      frame.origin.y = superViewSize.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
+        frame.origin.y = superViewSize.height-103-frame.size.height - [viewConfig floatValueForKey: @"privacyOffsetY_B" defaultValue: -1];
     }
     if ([viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1] > -1) {
       frame.origin.x = [viewConfig floatValueForKey: @"privacyOffsetX" defaultValue: -1];
