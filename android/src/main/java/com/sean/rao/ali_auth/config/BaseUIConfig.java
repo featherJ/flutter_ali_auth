@@ -98,8 +98,8 @@ public abstract class BaseUIConfig {
         JSONArray customThirdViewName = customThirdView.getJSONArray("viewItemName");
         /// 图片路径列表
         JSONArray customThirdViewItem = customThirdView.getJSONArray("viewItemPath");
+        LinearLayout linearLayout = new LinearLayout(mContext);
         if (customThirdViewName != null && customThirdViewItem != null) {
-            LinearLayout linearLayout = new LinearLayout(mContext);
             // 创建一个最大宽度和适量高度的布局
             LinearLayout.LayoutParams LayoutParams = new LinearLayout.LayoutParams(
                     customThirdView.getFloatValue("width") > 0 ? AppUtils.dp2px(mContext, customThirdView.getFloatValue("width")) : LinearLayout.LayoutParams.MATCH_PARENT,
@@ -185,11 +185,8 @@ public abstract class BaseUIConfig {
                     linearLayout.addView(itemLinearLayout);
                 }
             }
-
-            return linearLayout;
-        } else {
-            return null;
         }
+        return linearLayout;
     }
 
     /**
